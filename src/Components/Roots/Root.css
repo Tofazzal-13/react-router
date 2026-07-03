@@ -1,0 +1,7 @@
+.root-main{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    border: 2px solid gray;
+    padding: 20px 0;
+}
