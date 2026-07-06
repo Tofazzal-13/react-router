@@ -1,7 +1,13 @@
 .root-main{
-    display: flex;
-    gap: 20px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     border: 2px solid gray;
     padding: 20px 0;
+}
+
+.aside{
+    grid-column: 1;
+}
+.outlet{
+    grid-column: 2;
 }

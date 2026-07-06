@@ -10,8 +10,8 @@ const Roots = () => {
         <div>
             <Header></Header>
             <div className='root-main'>
-                <Sidebar></Sidebar>
-                <Outlet></Outlet>
+                <Sidebar ></Sidebar>
+                <Outlet ></Outlet>
             </div>
             <Footer></Footer>
         </div>
