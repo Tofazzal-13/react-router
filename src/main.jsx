@@ -21,11 +21,11 @@ const router = createBrowserRouter([
     path: "/",
     Component: Roots,
     children: [
-      {index: true, Component: Home},
-      {path: "mobile", Component: Mobile},
-      {path: "laptop", Component: Laptop},
+      { index: true, Component: Home },
+      { path: "mobile", Component: Mobile },
+      { path: "laptop", Component: Laptop },
       {
-        path: "users", 
+        path: "users",
         loader: () => fetch("https://jsonplaceholder.typicode.com/users"),
         Component: Users
       },
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path: "users/:userId",
-        loader: ({params}) => fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
+        loader: ({ params }) => fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
         Component: UserDetails
       },
       {
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
       },
       {
         path: "posts/:postId",
-        loader: ({params}) => fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
+        loader: ({ params }) => fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
         Component: PostDetails
       }
     ]
@@ -58,8 +58,13 @@ const router = createBrowserRouter([
   },
   {
     path: "/app",
-    Component: App 
+    Component: App
+  },
+  {
+    path: "*",
+    element: <h3>Not found : 404 status</h3>
   }
+
 ]);
 createRoot(document.getElementById('root')).render(
   <StrictMode>
